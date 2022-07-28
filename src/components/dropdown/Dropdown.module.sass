@@ -1,0 +1,82 @@
+@import "../../common/Default"
+
+.dropdown
+  position: absolute
+  border-radius: $br
+  overflow: hidden
+
+.dropdownEnter
+  color: transparent
+  background-color: transparent
+  top: 0
+
+.dropdownEnterDone
+  width: 300px
+  background-color: dodgerblue
+  top: $buttonHeight * 1.2
+  transform:  translateX(-85%)
+  transition: all $speed ease
+
+  .dropdown__item
+    padding: $innerPadding * 2
+    background-color: transparent
+    display: flex
+    align-items: center
+    transition: all $speed ease
+
+    &:hover
+      background-color: orange
+      cursor: pointer
+
+.dropdownExit
+  width: 300px
+  background-color: dodgerblue
+
+  top: $buttonHeight * 1.1
+  transform:  translateX(-45%)
+
+.dropdownExitActive
+  color: transparent
+  background-color: transparent
+  transition: all $speed ease
+  top: 0
+  transform: translateX(0)
+
+.dropdown__menu
+  width: 100%
+  display: flex
+  flex-direction: column
+
+//main
+.mainEnter
+  transform: translateX(-110%)
+  position: absolute
+
+.mainEnterActive
+  transform: translateX(0%)
+  transition: all $speed ease
+
+.mainExit
+  position: absolute
+
+.mainExitActive
+  transform: translateX(-110%)
+  transition: all $speed ease
+
+
+
+//settings
+.settingsEnter
+  transform: translateX(110%)
+  position: absolute
+
+.settingsEnterActive
+  transform: translateX(0%)
+  transition: all $speed ease
+
+.settingsExit
+  position: absolute
+
+.settingsExitActive
+  transform: translateX(110%)
+  transition: all $speed ease
