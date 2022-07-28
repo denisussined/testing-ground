@@ -1,0 +1,29 @@
+@import "../../common/Default"
+
+.navbar
+  height: $headerHeight
+  display: flex
+  align-items: center
+
+.navbar__item
+  position: relative
+
+
+.navbar__button
+  height: $buttonHeight
+  width: $buttonHeight
+  font-size: 20px
+  font-weight: bold
+  cursor: pointer
+  margin: $innerPadding + 2
+  border-radius: $br
+
+  display: flex
+  justify-content: center
+  align-items: center
+
+  background-color: $bcAccent
+  transition: filter $speed ease
+
+  &:hover
+    filter: brightness(1.3)
